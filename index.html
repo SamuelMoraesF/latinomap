@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Latinoware - Caravanas</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="leaflet.css" rel="stylesheet">
+
+	<style>
+	
+	body {
+		overflow:hidden;
+	}
+	
+	.row{
+		margin:0;
+		padding:0;
+	}
+	
+	.mapa {
+		padding:0;
+	}
+	
+	.alert {
+		position: fixed;
+		top:70px;
+		left:60px;
+		right:60px;
+		z-index: 9999;
+	}
+	
+	</style>
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+
+	<header>
+		<nav class="navbar navbar-default navbar-fixed-top navbar-inverse" role="navigation">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menutopo">
+						<span class="sr-only">Menu</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#">Caravanas Latinoware 2015</a>
+				</div>
+				
+				<div class="collapse navbar-collapse" id="menutopo">
+					<ul class="nav navbar-nav">
+						
+					</ul>
+					<ul class="nav navbar-nav navbar-right" style="padding-right:20px;">
+						<button type="button" class="btn btn-success navbar-btn"><span class="badge">53</span> Caravanas Chegaram</button>
+						<button type="button" class="btn btn-primary navbar-btn"><span class="badge">4</span> Caravanas a Caminho</button>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</header>
+	
+	<div class="alertarea">
+		
+		<div class="alert alert-success alert-dismissible" role="alert">
+			<button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Fechar</span></button>
+			A caravana <strong>Quatinoware</strong> acabou de chegar!
+		</div>
+		
+	</div>
+		
+	<div class="mapa"><div id="map" style="width:100%;height:100vh;margin-top:50px !important;"></div></div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="leaflet.js"></script>
+    <script src="gpx.js"></script>
+    <script>
+    
+    var map = L.map('map');
+	L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+		attribution: 'Map data &copy; <a href="http://www.osm.org">OpenStreetMap</a>'
+	}).addTo(map);
+	
+	var gpx = 'lake.gpx'; // URL to your GPX file or the GPX itself
+	new L.GPX(gpx, {async: true}).on('loaded', function(e) {
+		map.fitBounds(e.target.getBounds());
+	}).addTo(map);
+    
+    </script>
+  </body>
+</html>
