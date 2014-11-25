@@ -1,16 +1,11 @@
 <?xml version="1.0" encoding="ISO-8859-1" standalone="no" ?>
-<gpx creator="WTracks" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.topografix.com/GPX/1/1" version="1.1" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+<gpx xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.topografix.com/GPX/1/1" version="1.1" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
 <metadata>
-  <name>New Track</name>
+  <name>NOME CARAVANA</name>
   <desc></desc>
-  <author><name>WTracks - Online GPX track editor</name></author>
-  <link href="http://wtracks.appspot.com/">
-    <text>WTracks</text>
-    <type>text/html</type>
-  </link>
-  <time>2014-11-25T17-35-11Z</time>
+  <author><name>NOME AUTOR CARAVANA</name></author>
 <bounds minlat="-25.47791114475039" minlon="-54.7252554605011" maxlat="-25.340841928432607" maxlon="-54.2583365151886"/></metadata>
-<rte><name>New Track</name>
+<rte><name>IDA</name>
   <rtept lat="-25.437572937691883" lon="-54.59538280963898"></rtept>
   <rtept lat="-25.437606848194285" lon="-54.59525942802429"></rtept>
   <rtept lat="-25.43766013610735" lon="-54.59506630897522"></rtept>

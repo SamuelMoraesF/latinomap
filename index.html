@@ -81,7 +81,6 @@
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="leaflet.js"></script>
-    <script src="gpx.js"></script>
     <script>
     
     var map = L.map('map');
@@ -89,11 +88,6 @@
 		attribution: 'Map data &copy; <a href="http://www.osm.org">OpenStreetMap</a>'
 	}).addTo(map);
 	
-	var gpx = 'lake.gpx'; // URL to your GPX file or the GPX itself
-	new L.GPX(gpx, {async: true}).on('loaded', function(e) {
-		map.fitBounds(e.target.getBounds());
-	}).addTo(map);
-    
     </script>
   </body>
 </html>
