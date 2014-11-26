@@ -1,0 +1,30 @@
+body {
+	overflow:hidden;
+}
+
+.row{
+	margin:0;
+	padding:0;
+}
+
+.mapa {
+	padding:0;
+}
+
+#map {
+	width:100%;
+	height:100vh;
+	margin-top:50px !important;
+}
+
+.alert {
+	position: fixed;
+	top:70px;
+	left:60px;
+	right:60px;
+	z-index: 9999;
+}
+
+.navbar-status {
+	padding-right:20px;
+}

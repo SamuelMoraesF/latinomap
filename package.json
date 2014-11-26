@@ -1,0 +1,10 @@
+{
+  "name": "latinomap",
+  "version": "0.0.1",
+  "description": "Map System to Latinoware",
+  "dependencies": {
+    "express": "~4.10.2",
+    "jade": "~1.7.0",
+    "mongoskin": "~1.4.4"
+  }
+}
